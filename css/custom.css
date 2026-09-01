@@ -44,6 +44,17 @@
 -------------------------------------------------------------------------------------- */
 
 /************************************/
+/*** 	 Utility Classes         ***/
+/************************************/
+
+/* Honeypot anti-spam field - hidden from users */
+.hp-field {
+    display: none !important;
+    position: absolute;
+    left: -9999px;
+}
+
+/************************************/
 /*** 	 01. Global Variables	  ***/
 /************************************/
 
@@ -501,8 +512,8 @@ header.main-header .header-sticky{
 	position: relative;
 	top: 0;
 	background: var(--dark-divider-color);
-	backdrop-filter: blur(30px) saturate(100%);
 	-webkit-backdrop-filter: blur(30px) saturate(100%);
+	backdrop-filter: blur(30px) saturate(100%);
 	z-index: 100;
 }
 
@@ -1874,10 +1885,14 @@ header.main-header .header-sticky.active{
 
 .feature-item-shape-image figure{
 	display: block;
+	-webkit-mask-image: url('../images/feature-item-image-shape-1.svg');
     mask-image: url('../images/feature-item-image-shape-1.svg');
 	background-image: url('../images/feature-item-image-shape-1.svg');
+	-webkit-mask-size: cover;
     mask-size: cover;
+	-webkit-mask-position: center center;
     mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     width: 220px;
     height: 110px; 
@@ -2028,8 +2043,8 @@ header.main-header .header-sticky.active{
 
 .pricing-item{
 	background: var(--dark-divider-color);
-	backdrop-filter: blur(30px);
 	-webkit-backdrop-filter: blur(30px);
+	backdrop-filter: blur(30px);
 	border-radius: 10px;
 	height: calc(100% - 30px); 
 	margin-bottom: 30px;
@@ -2039,8 +2054,8 @@ header.main-header .header-sticky.active{
 .pricing-item-header{
 	position: relative;
 	background: var(--dark-divider-color);
-	backdrop-filter: blur(30px);
 	-webkit-backdrop-filter: blur(30px);
+	backdrop-filter: blur(30px);
 	border-radius: 10px;
 	padding: 30px;
 }
@@ -2423,8 +2438,8 @@ header.main-header .header-sticky.active{
 	width: 60px;
 	height: 60px;
 	background: var(--dark-divider-color);
-	backdrop-filter: blur(30px) saturate(100%);
 	-webkit-backdrop-filter: blur(30px) saturate(100%);
+	backdrop-filter: blur(30px) saturate(100%);
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
@@ -2797,8 +2812,8 @@ header.main-header .header-sticky.active{
 	line-height: 1.5em;
 	color: var(--white-color);
 	background: var(--divider-color);
-	backdrop-filter:  blur(30px) saturate(100%);
 	-webkit-backdrop-filter: blur(30px) saturate(100%);
+	backdrop-filter: blur(30px) saturate(100%);
 	border-radius: 5px;
 	padding: 5px 14px;
 	transition: all 0.4s ease-in-out;
@@ -2877,8 +2892,8 @@ header.main-header .header-sticky.active{
 }
 
 .main-footer::after{
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
 }
 
 .footer-scrolling-ticker{
@@ -2892,6 +2907,7 @@ header.main-header .header-sticky.active{
 	--gap: 20px;
 	display: flex;
 	overflow: hidden;
+	-webkit-user-select: none;
 	user-select: none;
 	gap: var(--gap);
 	align-items: center;
@@ -3140,8 +3156,8 @@ header.main-header .header-sticky.active{
     color: var(--white-color);
     line-height: normal;
     background: var(--dark-divider-color);
-    backdrop-filter: blur(180px);
     -webkit-backdrop-filter: blur(180px);
+    backdrop-filter: blur(180px);
     border-radius: 10px;
     padding: 10px 16px;
     transition: all 0.4s ease-in-out;
@@ -3273,8 +3289,8 @@ header.main-header .header-sticky.active{
 	background-color: var(--dark-divider-color);
 	padding: 50px;
 	border-radius: 10px;
-	backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+	backdrop-filter: blur(30px);
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 	overflow: hidden;
@@ -3297,24 +3313,30 @@ header.main-header .header-sticky.active{
 
 .approach-item-image figure{
 	display: block;
+	-webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
     mask-size: cover;
+	-webkit-mask-position: center center;
     mask-position: center center;
 	width: 100%;
 	max-width: 120px;
 }
 
 .approach-item.box-1 .approach-item-image figure{
+	-webkit-mask-image: url('../images/approach-item-shape-1.svg');
     mask-image: url('../images/approach-item-shape-1.svg');
     background-image: url('../images/approach-item-shape-1.svg');
 }
 
 .approach-item.box-2 .approach-item-image figure{
+	-webkit-mask-image: url('../images/approach-item-shape-2.svg');
     mask-image: url('../images/approach-item-shape-2.svg');
     background-image: url('../images/approach-item-shape-2.svg');
 }
 
 .approach-item.box-3 .approach-item-image figure{
+	-webkit-mask-image: url('../images/approach-item-shape-3.svg');
     mask-image: url('../images/approach-item-shape-3.svg');
     background-image: url('../images/approach-item-shape-3.svg');
 }
@@ -3441,8 +3463,8 @@ header.main-header .header-sticky.active{
 	left: 20px;
 	bottom: 20px;
 	background-color: var(--divider-color);
+	-webkit-backdrop-filter: blur(30px) saturate(100%);
 	backdrop-filter: blur(30px) saturate(100%);
-    -webkit-backdrop-filter: blur(30px) saturate(100%);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -4646,11 +4668,15 @@ header.main-header .header-sticky.active{
 }
 
 .project-feature-item-image figure{
+	-webkit-mask-image: url('../images/project-feature-image-shape.svg');
     mask-image: url('../images/project-feature-image-shape.svg');
     background-image: url('../images/project-feature-image-shape.svg');
 	display: block;
+	-webkit-mask-size: cover;
     mask-size: cover;
+	-webkit-mask-position: center center;
     mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -7209,8 +7235,8 @@ header.main-header .header-sticky.active{
 
 header.main-header.header-gold .header-sticky{
     background: transparent;
-    backdrop-filter: initial;
     -webkit-backdrop-filter: initial;
+    backdrop-filter: initial;
     border-bottom: 1px solid var(--dark-divider-color);
 }
 
@@ -7312,10 +7338,12 @@ header.main-header.header-gold .header-sticky.active{
 	position: absolute;
 	width: 20px;
     height: 20px;
-	mask: url('../images/hero-client-box-corner-shape-gold.svg');
 	-webkit-mask: url('../images/hero-client-box-corner-shape-gold.svg');
+	mask: url('../images/hero-client-box-corner-shape-gold.svg');
 	background-color: var(--primary-color);
+	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
 	mask-size: cover;
 }
 
@@ -7343,8 +7371,8 @@ header.main-header.header-gold .header-sticky.active{
     bottom: 0;
     left: 60px;
     background: var(--dark-divider-color);
-    backdrop-filter: blur(20px) saturate(100%);
     -webkit-backdrop-filter: blur(20px) saturate(100%);
+    backdrop-filter: blur(20px) saturate(100%);
     border-radius: 10px 10px 0 0;
     text-align: center;
     width: 100%;
@@ -7820,11 +7848,15 @@ header.main-header.header-gold .header-sticky.active{
 
 .what-we-item-shape-image-gold figure{
     display: block;
+    -webkit-mask-size: cover;
     mask-size: cover;
+    -webkit-mask-position: center center;
     mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     width: 100px;
     height: 70px; 
+    -webkit-mask-image: url('../images/what-we-item-bg-shape-image-1-gold.svg');
     mask-image: url('../images/what-we-item-bg-shape-image-1-gold.svg');
 	background-image: url('../images/what-we-item-bg-shape-image-1-gold.svg');
 }
@@ -7893,6 +7925,7 @@ header.main-header.header-gold .header-sticky.active{
 .what-we-item-gold.box-4 .what-we-item-shape-image-gold figure{
     width: 100px;
     height: 50px;
+    -webkit-mask-image: url(../images/what-we-item-bg-shape-image-2-gold.svg);
     mask-image: url(../images/what-we-item-bg-shape-image-2-gold.svg);
     background-image: url(../images/what-we-item-bg-shape-image-2-gold.svg);
 }
@@ -7977,8 +8010,8 @@ header.main-header.header-gold .header-sticky.active{
 
 .why-choose-item-gold{
     background: var(--dark-divider-color);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -8049,8 +8082,8 @@ header.main-header.header-gold .header-sticky.active{
 
 .why-choose-counter-list-gold{
     background: var(--dark-divider-color);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -8105,8 +8138,8 @@ header.main-header.header-gold .header-sticky.active{
     align-items: center;
     gap: 20px;
     background: var(--dark-divider-color);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border-radius: 10px;
     padding: 10px;
 }
@@ -9660,8 +9693,8 @@ header.main-header.header-silver .header-sticky.active{
 .hero-body-item-silver{
 	width: calc(50% - 15px);
 	background: var(--dark-divider-color);
-    backdrop-filter: blur(30px) saturate(100%);
     -webkit-backdrop-filter: blur(30px) saturate(100%);
+    backdrop-filter: blur(30px) saturate(100%);
 	border-radius: 10px;
 	display: flex;
 	flex-wrap: wrap;
@@ -9798,8 +9831,8 @@ header.main-header.header-silver .header-sticky.active{
     bottom: 30px;
     left: 30px;
     background: var(--divider-color);
-    backdrop-filter: blur(15px) saturate(100%);
     -webkit-backdrop-filter: blur(15px) saturate(100%);
+    backdrop-filter: blur(15px) saturate(100%);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: start;
@@ -10055,10 +10088,14 @@ header.main-header.header-silver .header-sticky.active{
 
 .service-item-image-silver figure{
 	display: block;
+	-webkit-mask-image: url('../images/service-image-shap-silver.svg');
 	mask-image: url('../images/service-image-shap-silver.svg');
     background-image: url('../images/service-image-shap-silver.svg');
+    -webkit-mask-size: cover;
     mask-size: cover;
+    -webkit-mask-position: center center;
     mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     max-width: 355px;
     max-height: 175px;
@@ -10625,8 +10662,8 @@ header.main-header.header-silver .header-sticky.active{
 
 .working-process-body-silver{
 	background-color: var(--dark-divider-color);
-	backdrop-filter: blur(20px) saturate(100%);
 	-webkit-backdrop-filter: blur(20px) saturate(100%);
+	backdrop-filter: blur(20px) saturate(100%);
 	padding: 30px;
 	border-radius: 10px;
 	height: 100%;
