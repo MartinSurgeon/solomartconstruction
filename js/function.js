@@ -5,9 +5,20 @@
 	var $body = $('body'); 
 
 	/* Preloader Effect */
+	function hidePreloader() {
+		if ($(".preloader").length && $(".preloader").is(':visible')) {
+			$(".preloader").fadeOut(300);
+		}
+	}
+
 	$window.on('load', function(){
-		$(".preloader").fadeOut(600);
+		hidePreloader();
 	});
+
+	// Maximum timeout fallback (prevents live server delay from heavy asset downloads)
+	setTimeout(function(){
+		hidePreloader();
+	}, 600);
 
 	/* Sticky Header */	
 	if($('.active-sticky-header').length){
