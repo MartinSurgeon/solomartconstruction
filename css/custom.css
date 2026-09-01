@@ -1567,6 +1567,9 @@ header.main-header .header-sticky.active{
 
 .section-footer-text ul li i{
 	color: var(--accent-color);
+	font-family: "Font Awesome 6 Free", "FontAwesome" !important;
+	font-weight: 900;
+	display: inline-block;
 }
 
 .dark-section .section-footer-text p,
