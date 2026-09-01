@@ -1,0 +1,31 @@
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Circular Path for Text -->
+    <path id="textCircleTransparent" d="M 70, 70 m -52, 0 a 52,52 0 1,1 104,0 a 52,52 0 1,1 -104,0" />
+    <filter id="glassBlur" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+  </defs>
+
+  <!-- Outer Glass Circle Background -->
+  <circle cx="70" cy="70" r="68" fill="rgba(255, 255, 255, 0.12)" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.5"/>
+
+  <!-- Rotating Perimeter Text -->
+  <text fill="#FFFFFF" font-family="'Space Grotesk', 'DM Sans', sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.8">
+    <textPath href="#textCircleTransparent" startOffset="0%">
+      ★ SOLOMART CONSTRUCTION ★ QUALITY &amp; TRUST
+    </textPath>
+  </text>
+
+  <!-- Inner Circle Base -->
+  <circle cx="70" cy="70" r="32" fill="#0D0D0D" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <circle cx="70" cy="70" r="28" fill="#FED403"/>
+
+  <!-- Official Solomart Brand Emblem -->
+  <g transform="translate(49, 49) scale(0.88)">
+    <path d="M12 36L24 14L36 36H12Z" stroke="#0D0D0D" stroke-width="3" stroke-linejoin="round" fill="none"/>
+    <path d="M18 25H30" stroke="#0D0D0D" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="21" y="28" width="6" height="8" fill="#0D0D0D"/>
+    <circle cx="24" cy="14" r="3" fill="#0D0D0D"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg width="260" height="52" viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brand Icon -->
+  <g transform="translate(2, 2)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#FED403"/>
+    <path d="M12 36L24 14L36 36H12Z" stroke="#0D0D0D" stroke-width="3" stroke-linejoin="round" fill="none"/>
+    <path d="M18 25H30" stroke="#0D0D0D" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="21" y="28" width="6" height="8" fill="#0D0D0D"/>
+    <circle cx="24" cy="14" r="3" fill="#0D0D0D"/>
+  </g>
+  <!-- Brand Name -->
+  <text x="60" y="27" font-family="'Space Grotesk', 'DM Sans', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="1.5">SOLOMART</text>
+  <!-- Tagline -->
+  <text x="61" y="42" font-family="'DM Sans', sans-serif" font-size="9" font-weight="700" fill="#FED403" letter-spacing="2">CONSTRUCTION LTD</text>
+</svg>
